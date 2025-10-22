@@ -1,0 +1,534 @@
+/* ========================================
+   Brain Tumor Detection - Modern Dark Theme
+   ======================================== */
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* Global Variables */
+:root {
+    --primary-bg: #0E1117;
+    --secondary-bg: #1A1D24;
+    --card-bg: #262B35;
+    --accent-color: #4F46E5;
+    --accent-hover: #6366F1;
+    --text-primary: #FFFFFF;
+    --text-secondary: #A0A0A0;
+    --border-color: #2D3139;
+    --success-color: #10B981;
+    --success-bg: rgba(16, 185, 129, 0.1);
+    --warning-color: #F59E0B;
+    --warning-bg: rgba(245, 158, 11, 0.1);
+    --danger-color: #EF4444;
+    --danger-bg: rgba(239, 68, 68, 0.1);
+    --info-color: #3B82F6;
+    --info-bg: rgba(59, 130, 246, 0.1);
+}
+
+/* Main Container Styling */
+.stApp {
+    background: linear-gradient(135deg, #0E1117 0%, #1A1D24 100%);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Remove default padding */
+.block-container {
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+    max-width: 1400px;
+}
+
+/* Hero Section */
+.hero-section {
+    text-align: center;
+    padding: 3rem 2rem;
+    margin-bottom: 3rem;
+    background: linear-gradient(135deg, rgba(79, 70, 229, 0.1) 0%, rgba(99, 102, 241, 0.05) 100%);
+    border-radius: 20px;
+    border: 1px solid rgba(79, 70, 229, 0.2);
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.02em;
+}
+
+.hero-subtitle {
+    font-size: 1.4rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+    margin-bottom: 0.8rem;
+}
+
+.hero-description {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    font-weight: 300;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Section Styling - Removed empty boxes, content flows naturally */
+
+/* Headers */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--text-primary) !important;
+    font-weight: 600 !important;
+}
+
+/* Section Headers */
+.section-header {
+    font-size: 1.5rem !important;
+    font-weight: 600 !important;
+    color: var(--text-primary) !important;
+    margin-bottom: 1.5rem !important;
+    margin-top: 0.5rem !important;
+    padding-bottom: 0.75rem !important;
+    border-bottom: 2px solid var(--border-color) !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 0.5rem !important;
+}
+
+.section-icon {
+    font-size: 1.8rem;
+    display: inline-flex;
+    align-items: center;
+}
+
+/* Add spacing between sections */
+[data-testid="column"] > div {
+    padding: 1rem 0;
+}
+
+/* File Uploader */
+.stFileUploader {
+    background: var(--secondary-bg);
+    border-radius: 12px;
+    border: 2px dashed var(--border-color);
+    padding: 2rem;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+}
+
+.stFileUploader:hover {
+    border-color: var(--accent-color);
+    background: rgba(79, 70, 229, 0.05);
+    transform: translateY(-2px);
+}
+
+.stFileUploader label {
+    color: var(--text-primary) !important;
+    font-size: 1.1rem !important;
+    font-weight: 500 !important;
+}
+
+/* Hide file uploader label when collapsed */
+.stFileUploader[data-testid="stFileUploader"] > label[data-testid="stWidgetLabel"] {
+    display: none;
+}
+
+/* File uploader text styling */
+.stFileUploader small {
+    color: var(--text-secondary) !important;
+    font-size: 0.9rem !important;
+}
+
+.stFileUploader [data-testid="stFileUploaderDropzone"] {
+    background: transparent !important;
+    border: none !important;
+}
+
+.stFileUploader [data-testid="stFileUploaderDropzoneInstructions"] {
+    color: var(--text-secondary) !important;
+}
+
+/* Browse files button */
+.stFileUploader button {
+    background: var(--accent-color) !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 8px !important;
+    padding: 0.5rem 1.5rem !important;
+    font-weight: 500 !important;
+    transition: all 0.3s ease !important;
+}
+
+.stFileUploader button:hover {
+    background: var(--accent-hover) !important;
+    transform: scale(1.05) !important;
+}
+
+/* Image Container */
+img {
+    border-radius: 12px !important;
+    border: 1px solid var(--border-color) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4) !important;
+    margin: 1rem 0 !important;
+}
+
+/* Buttons */
+.stButton > button {
+    background: linear-gradient(135deg, var(--accent-color) 0%, var(--accent-hover) 100%) !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 10px !important;
+    padding: 0.75rem 2rem !important;
+    font-weight: 600 !important;
+    font-size: 1.05rem !important;
+    transition: all 0.3s ease !important;
+    box-shadow: 0 4px 12px rgba(79, 70, 229, 0.4) !important;
+}
+
+.stButton > button:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 20px rgba(79, 70, 229, 0.6) !important;
+}
+
+.button-container {
+    margin-top: 1.5rem;
+}
+
+/* Result Cards */
+.result-card {
+    padding: 2rem;
+    border-radius: 16px;
+    margin: 1.5rem 0;
+    text-align: center;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    animation: slideIn 0.5s ease;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.result-positive {
+    background: var(--warning-bg);
+    border: 2px solid var(--warning-color);
+}
+
+.result-negative {
+    background: var(--success-bg);
+    border: 2px solid var(--success-color);
+}
+
+.result-icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.result-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+
+.result-positive .result-title {
+    color: var(--warning-color);
+}
+
+.result-negative .result-title {
+    color: var(--success-color);
+}
+
+.result-confidence {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+/* Info Card */
+.info-card {
+    background: var(--info-bg);
+    border: 1px solid var(--info-color);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.info-icon {
+    font-size: 2rem;
+    flex-shrink: 0;
+}
+
+.info-content {
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.info-content strong {
+    color: var(--text-primary);
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+/* Feature List */
+.feature-list {
+    margin: 1.5rem 0;
+}
+
+.feature-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: var(--secondary-bg);
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+.feature-item:hover {
+    transform: translateX(5px);
+    border-color: var(--accent-color);
+    box-shadow: 0 4px 12px rgba(79, 70, 229, 0.2);
+}
+
+.feature-number {
+    background: linear-gradient(135deg, var(--accent-color) 0%, var(--accent-hover) 100%);
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.feature-content {
+    flex: 1;
+}
+
+.feature-content strong {
+    color: var(--text-primary);
+    font-size: 1.1rem;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.feature-content p {
+    color: var(--text-secondary);
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* Metric Cards */
+.metric-card {
+    background: var(--secondary-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.metric-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent-color);
+    box-shadow: 0 8px 16px rgba(79, 70, 229, 0.3);
+}
+
+.metric-value {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--accent-color);
+    margin-bottom: 0.5rem;
+}
+
+.metric-label {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Sample Images */
+.sample-description {
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+}
+
+.sample-image img {
+    transition: all 0.3s ease;
+}
+
+.sample-image:hover img {
+    border-color: var(--accent-color) !important;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4) !important;
+    transform: scale(1.02) !important;
+}
+
+/* Progress Bar */
+.confidence-section {
+    margin: 1.5rem 0;
+    padding: 1rem;
+    background: var(--secondary-bg);
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+}
+
+.confidence-label {
+    color: var(--text-primary);
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 1rem !important;
+    display: block;
+}
+
+/* Streamlit Progress Bar Fix */
+.stProgress {
+    margin-top: 0 !important;
+    height: 20px !important;
+}
+
+/* Background track */
+.stProgress > div[role="progressbar"] {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    border-radius: 10px !important;
+    height: 20px !important;
+    overflow: hidden !important;
+}
+
+/* Progress fill bar */
+.stProgress > div[role="progressbar"] > div {
+    background: linear-gradient(90deg, #4F46E5 0%, #7C3AED 100%) !important;
+    height: 20px !important;
+    border-radius: 10px !important;
+}
+
+/* Remove any nested divs styling that might cause overlap */
+.stProgress > div[role="progressbar"] > div > div {
+    display: none !important;
+}
+
+/* Alternative selectors for different Streamlit versions */
+.stProgress [data-testid="stProgressBar"] {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    height: 20px !important;
+    border-radius: 10px !important;
+}
+
+.stProgress [data-testid="stProgressBar"] > div {
+    background: linear-gradient(90deg, #4F46E5 0%, #7C3AED 100%) !important;
+    height: 20px !important;
+    border-radius: 10px !important;
+}
+
+/* Force clean single-layer progress bar */
+.stProgress * {
+    box-sizing: border-box !important;
+}
+
+.stProgress div[style*="width"] {
+    background: linear-gradient(90deg, #4F46E5 0%, #7C3AED 100%) !important;
+    height: 100% !important;
+    position: relative !important;
+}
+
+/* Hide any duplicate or nested visual elements */
+.stProgress div div div {
+    opacity: 0 !important;
+    display: none !important;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 2rem;
+    margin-top: 3rem;
+    color: var(--text-secondary);
+}
+
+.footer p {
+    margin: 0.5rem 0;
+}
+
+.footer strong {
+    color: var(--text-primary);
+}
+
+.footer-disclaimer {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* Spinner */
+.stSpinner > div {
+    border-top-color: var(--accent-color) !important;
+}
+
+/* Markdown Text */
+.stMarkdown {
+    color: var(--text-secondary);
+}
+
+/* Paragraph text in sections */
+.stMarkdown p {
+    line-height: 1.7;
+}
+
+/* Caption Text */
+.stImage > div > div {
+    color: var(--text-secondary) !important;
+    font-size: 0.95rem !important;
+    margin-top: 0.5rem !important;
+}
+
+/* Column spacing */
+[data-testid="column"] {
+    padding: 0 0.5rem;
+}
+
+/* Improve text contrast */
+div[data-testid="stMarkdownContainer"] p {
+    color: var(--text-secondary);
+}
+
+/* Hide Streamlit Branding */
+#MainMenu {visibility: hidden;}
+footer {visibility: hidden;}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .hero-description {
+        font-size: 1rem;
+    }
+    
+    .upload-section, .info-section, .results-section {
+        padding: 1.5rem;
+    }
+    
+    .result-title {
+        font-size: 1.5rem;
+    }
+}
